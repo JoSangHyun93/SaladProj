@@ -50,7 +50,8 @@
 <br><br>
 <div align='center'>
   <h2>E-R 다이어그램</h2><br>
-  <img src="https://github.com/startDev01/Salad/assets/97159362/c8aea799-8e4a-4738-9c8e-51008326b0c1">
+  ![ERD 논리적 설계1](https://github.com/JoSangHyun93/saladProj/assets/122254531/4e97a4e4-eb59-4347-ab3e-c12e181b7133)
+
 </div>
 <br><br>
 <div align='center'>
