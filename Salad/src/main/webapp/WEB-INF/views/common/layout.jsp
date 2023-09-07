@@ -16,33 +16,14 @@
 			border: 0px solid #bcbcbc;
 			}
 			
-			/* 주석: 하유리 */
 			#header {
-	        /* padding: 5px; */
-			/* margin-bottom: 5px; */
-			/* border: 0px solid #bcbcbc; */
 			border: 0px solid #bcbcbc;
 			font-family: Pretendard-Regular;
-			/* background-color: lightgreen; */
 			}
 			
-			/* 주석: 하유리 */
- 			/* #sidebar-left {
-	        width: 15%;
-	        height:700px;
-	        padding: 5px;
-	        margin-right: 5px;
-	        margin-bottom: 5px;
-	        float: left;
-	        background-color: yellow;
-	        border: 0px solid #bcbcbc;
-	        font-size:10px;
-			}  */
 			
 			#content {
 	        width: 100%;
-	        /* padding: 5px; */
-	        /* margin-right: 5px; */	/* 주석: 하유리 */
 	        float: left;
 	        border: 0px solid #bcbcbc;
 			}
@@ -63,10 +44,6 @@
 			<div id="header">
 	         	<tiles:insertAttribute name="header"/>
 	      	</div>
-	      	<!-- 주석: 하유리 -->
-<%-- 	       <div id="sidebar-left">
-	          <tiles:insertAttribute name="side"/> 
-	      </div>  --%>
 	      	<div id="content">
 	          	<tiles:insertAttribute name="body"/>
 	      	</div>
