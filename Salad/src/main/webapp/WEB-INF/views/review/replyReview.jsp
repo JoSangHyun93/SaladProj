@@ -17,19 +17,19 @@
 		/* 폰트 */
  		@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 	
-		/* 하유리: 리뷰페이지 제목 수정(23.07.29.) */
+		/*  리뷰페이지 제목 수정(23.07.29.) */
 		.review_sub {
 			margin: 50px 0;
-			padding: 178px 0 24px 0;		/* 하유리: 헤더 영역만큼 아래로 내림(23.07.25.) */
-		}												/* 하유리: 제목 주변 여백 수정(23.07.29.)  */
+			padding: 178px 0 24px 0;		/*  헤더 영역만큼 아래로 내림(23.07.25.) */
+		}												/*  제목 주변 여백 수정(23.07.29.)  */
 	
-		/* 하유리: 이벤트페이지 제목 수정(23.07.29.)  */
+		/*  이벤트페이지 제목 수정(23.07.29.)  */
 		.review_text {
 		 	font-family: 'Noto Sans KR', sans-serif;
-			font-size: 32px;						/* 하유리: 폰트 크기 수정(23.07.29.) */
+			font-size: 32px;						/*  폰트 크기 수정(23.07.29.) */
 			font-weight: 700;
 			line-height: 1.2;
-		  	letter-spacing: -1px;				/* 하유리: 제목 자간 수정(23.07.29.) */
+		  	letter-spacing: -1px;				/*  제목 자간 수정(23.07.29.) */
 		}
 	
 		.container {
@@ -40,7 +40,7 @@
 			font-family: 'Noto Sans KR', sans-serif;
  			font-size: 14px;
 			margin: 0 auto;
-			padding-bottom: 10px;			/* 하유리: 버튼-footer 사이 여백 추가(23.07.30.) */
+			padding-bottom: 10px;			/*  버튼-footer 사이 여백 추가(23.07.30.) */
 		}
 		
 		/* 중앙정렬 */
@@ -50,24 +50,24 @@
 			justify-content: center;
 		}
 		
-		/* 하유리: 행 간격 띄우기(23.07.17.) */
+		/*  행 간격 띄우기(23.07.17.) */
 		.reply_table table {
 			text-align: left;	/* th 왼쪽정렬 */
 			border-collapse: separate;
 			border-spacing: 10px 20px;
-			margin-top: -21px;			/* 하유리: 테이블 위쪽 여백 줄이기(23.07.30.) */
+			margin-top: -21px;			/*  테이블 위쪽 여백 줄이기(23.07.30.) */
 		}
 	
-		/* 하유리: 글자-input박스 간 간격(23.07.17.) */
+		/*  글자-input박스 간 간격(23.07.17.) */
 		.reply_table th {
 			font-weight: normal;
 			flex: left;
 			padding-right: 100px;
 		}
 		
-		/* 하유리: input box, textarea */
+		/*  input box, textarea */
 		.insert_input, textarea {
-			padding: 5px 5px;			/* 하유리: 클래스명 수정(23.07.31.) */
+			padding: 5px 5px;			/*  클래스명 수정(23.07.31.) */
 		}
 		
 		/* input, textarea 스타일 지정 */
@@ -109,16 +109,16 @@
 			float: right;
 			margin-left: 20px;
 			float: center;
-			margin-left: 4px;					/* 하유리: 버튼 사이 간격 수정(23.07.30.) */
+			margin-left: 4px;					/*  버튼 사이 간격 수정(23.07.30.) */
 		}
 		
 		.contentBtn:focus {
-			outline: none;						/* 하유리: 버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
+			outline: none;						/*  버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
 		}
 	</style>
 	
 	<script>
-		/* 하유리: 파일 업로드 input 가운데 배열(23.07.31.) */
+		/*  파일 업로드 input 가운데 배열(23.07.31.) */
 		var cnt=1;	//파일업로드 name값을 다르게 하는 변수
 		function fn_addFile(){	//파일추가를 클릭하면 동적으로 파일업로드 추가(name의 속성값으로 'file'+cnt를 설정하여 값을 다르게 해줌')
 			$("#d_file").append("<br>"+"<input style='padding: 8px;' type='file' name='file"+cnt +"' />");
@@ -131,9 +131,9 @@
 <body>
 	<div class="container mt-3">
 		<!-- 제목: 변경(23.07.21.)(23.07.30.) -->
-		<!-- 하유리: 필요없는 부분 삭제(23.07.30.) -->
-		<div class="review_sub">								<!-- 하유리: 클래스명 변경(23.07.30.) -->
-			<p class="review_text">REVIEW</p>		<!-- 하유리: 클래스명 변경(23.07.30.) -->
+		<!--  필요없는 부분 삭제(23.07.30.) -->
+		<div class="review_sub">								<!--  클래스명 변경(23.07.30.) -->
+			<p class="review_text">REVIEW</p>		<!--  클래스명 변경(23.07.30.) -->
 		</div>
 	
 		<!-- 게시판 -->
