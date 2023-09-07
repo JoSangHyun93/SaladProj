@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-/*서승희 mypageVO*/
 @Data
 @Component("mypageVO")
 public class MyPageVO {
