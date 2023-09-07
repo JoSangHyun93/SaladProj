@@ -14,25 +14,25 @@
     <link href="../resources/css/footer.css" rel="stylesheet" type="text/css">
 	<style>
 	
-		/* 하유리: 폰트 수정(23.07.31.) */
+		/*  폰트 수정(23.07.31.) */
  		@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 		
-		/* 하유리: 공지페이지 제목 수정(23.07.29.) */
+		/*  공지페이지 제목 수정(23.07.29.) */
 		.notice_sub {
 			margin: 50px 0;
-			padding: 178px 0 24px 0;		/* 하유리: 헤더 영역만큼 아래로 내림(23.07.25.) */
-		}												/* 하유리: 제목 주변 여백 수정(23.07.29.)  */
+			padding: 178px 0 24px 0;		/*  헤더 영역만큼 아래로 내림(23.07.25.) */
+		}												/*  제목 주변 여백 수정(23.07.29.)  */
 		
-		/* 하유리: 공지페이지 제목 수정(23.07.29.)  */
+		/*  공지페이지 제목 수정(23.07.29.)  */
 		.notice_text {
 		 	font-family: 'Noto Sans KR', sans-serif;
-			font-size: 32px;						/* 하유리: 폰트 크기 수정(23.07.29.) */
+			font-size: 32px;						/*  폰트 크기 수정(23.07.29.) */
 			font-weight: 700;
 			line-height: 1.2;
-		  	letter-spacing: -1px;				/* 하유리: 제목 자간 수정(23.07.29.) */
+		  	letter-spacing: -1px;				/*  제목 자간 수정(23.07.29.) */
 		}
 	
-		/* 하유리: 전체 <div>(23.07.31.) */
+		/*  전체 <div>(23.07.31.) */
 		.container {
 			width: 100%;
 /*			display: flex;
@@ -41,7 +41,7 @@
 			font-family: 'Noto Sans KR', sans-serif;
  			font-size: 14px;
 			margin: 0 auto;
-			padding-bottom: 10px;			/* 하유리: 수정/삭제 버튼-footer 사이 여백 추가(23.07.30.) */
+			padding-bottom: 10px;			/*  수정/삭제 버튼-footer 사이 여백 추가(23.07.30.) */
 		}
 		
 		/* 중앙정렬 */
@@ -51,34 +51,34 @@
 			justify-content: center;
 		}
 		
-		/* 하유리: 행 간격 띄우기(23.07.17.) */
+		/*  행 간격 띄우기(23.07.17.) */
 		.insert_table table {
 			text-align: left;	/* th 왼쪽정렬 */
 			border-collapse: separate;
 			border-spacing: 10px 20px;
-			margin-top: -21px;			/* 하유리: 테이블 위쪽 여백 줄이기(23.07.30.) */
+			margin-top: -21px;			/*  테이블 위쪽 여백 줄이기(23.07.30.) */
 		}
 	
-		/* 하유리: 글자-input박스 간 간격(23.07.17.) */
+		/*  글자-input박스 간 간격(23.07.17.) */
 		.insert_table th {
 			font-weight: normal;
 			flex: left;
 			padding-right: 100px;
 		}
 		
-		/* 하유리: input box, textarea */
-		.insert_input, textarea {		/* 하유리: 클래스명 수정(23.07.31.) */
+		/*  input box, textarea */
+		.insert_input, textarea {		/*  클래스명 수정(23.07.31.) */
 			padding: 5px 5px;			
 		}
 		
-		/* 하유리: 파일업로드 부분(23.08.01.) */
+		/*  파일업로드 부분(23.08.01.) */
 		.insert_file {
-			padding: 8px;				/* 하유리: 파일 업로드 input 가운데 배열(23.07.31.) */
+			padding: 8px;				/*  파일 업로드 input 가운데 배열(23.07.31.) */
 		}	
 		
-		/* 하유리: 파일업로드 부분(23.07.31.) */
+		/*  파일업로드 부분(23.07.31.) */
 		.insert_file {
-			padding: 8px;				/* 하유리: 파일 업로드 input 가운데 배열(23.07.31.) */
+			padding: 8px;				/*  파일 업로드 input 가운데 배열(23.07.31.) */
 		}	
 		
 		/* input, textarea 스타일 지정 */
@@ -118,12 +118,12 @@
 			background-color:#128853;
 			color: #fff;
 			float: right;
-			margin-left: 4px;					/* 하유리: 버튼 사이 간격 수정(23.07.30.) */
+			margin-left: 4px;					/*  버튼 사이 간격 수정(23.07.30.) */
 			float: center;
 		}
 		
 		.writeBtn:focus {
-			outline: none;						/* 하유리: 버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
+			outline: none;						/*  버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
 		}
 	</style>
 
@@ -132,9 +132,9 @@
 <body>
 	<div class="container mt-3">
 		<!-- 제목: 변경(23.07.21.) -->
-		<!-- 하유리: 필요없는 부분 삭제(23.07.30.) -->
-		<div class="notice_sub">							<!-- 하유리: 클래스명 변경(23.07.30.) -->
-			<p class="notice_text">NOTICE</p>		<!-- 하유리: 클래스명 변경(23.07.30.) -->
+		<!--  필요없는 부분 삭제(23.07.30.) -->
+		<div class="notice_sub">							<!--  클래스명 변경(23.07.30.) -->
+			<p class="notice_text">NOTICE</p>		<!--  클래스명 변경(23.07.30.) -->
 		</div>
 	
 		<!-- 게시판 -->
@@ -142,7 +142,7 @@
 			<form action="<c:url value='/notice/update'/>" method="POST" enctype="multipart/form-data">
 				<input name="re_articleNO" type="hidden" value="${notice.articleNO }">
 				<table>
-				<!-- 하유리: 필요 없는 부분  주석(23.07.30.) -->
+				<!--  필요 없는 부분  주석(23.07.30.) -->
  					<!-- <tr>
 						<th>주문상품</th>
 						<td>	<input class="insert_input" name="orderList" required autocomplete="off" width="440px" disabled/></td>
