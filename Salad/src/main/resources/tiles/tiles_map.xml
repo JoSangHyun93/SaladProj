@@ -11,7 +11,7 @@
       <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
    </definition>
 
-   <!-- 하유리: 위치페이지(23.07.27.)  -->
+   <!--  위치페이지(23.07.27.)  -->
    <definition name="/map/*" extends="baseLayout">
       <put-attribute name="title" value="위치페이지" />
       <put-attribute name="body" value="/WEB-INF/views/map/mapPage.jsp" />
