@@ -15,16 +15,16 @@
 
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<!-- 하유리: CSS 링크 수정(23.07.31.) -->
+	<!--  CSS 링크 수정(23.07.31.) -->
    	<link href="resources/css/header.css" rel="stylesheet" type="text/css">
    	<link href="resources/css/footer.css" rel="stylesheet" type="text/css">
    	<link rel="stylesheet" href="resources/css/cart/cart.css" type="text/css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  	<!-- 하유리: <style> 태그 비어있어서 삭제(23.08.01.) -->
+  	<!--  <style> 태그 비어있어서 삭제(23.08.01.) -->
   	<title>장바구니</title>
 </head>
 
-<%-- JSP 김동혁 추가 (23-07-21) --%>
+<%-- JSP  추가 (23-07-21) --%>
 <body>
   <div class="body-container">
     <div class="cart-container">
@@ -108,7 +108,7 @@
   </div>
 
 <script>
-  /* Script 김동혁 추가(23.07.20) */
+  /* Script  추가(23.07.20) */
   $(document).ready(function () {
     let cartNum;
 
