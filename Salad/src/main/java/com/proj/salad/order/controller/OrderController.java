@@ -22,7 +22,6 @@ import com.proj.salad.order.vo.OrderMenuVO;
 import com.proj.salad.order.vo.OrderVO;
 import com.proj.salad.user.vo.UserVO;
 
-/* Order Controller 조상현 추가 */
 @Controller
 public class OrderController {
 	@Autowired
