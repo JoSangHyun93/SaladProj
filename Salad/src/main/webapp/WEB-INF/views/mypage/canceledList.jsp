@@ -22,7 +22,7 @@
     <style>
         /* css 적용 부분 */
 	 .odl-container{   /* 임시 */
-         padding-top: 178px;   /* 하유리: 헤더 영역만큼 아래로 내림(23.07.25.) */
+         padding-top: 178px;   /*  헤더 영역만큼 아래로 내림(23.07.25.) */
       }
         #canceled-list-title {
             font-size: 20px;
@@ -76,7 +76,7 @@
 </div>
 
 <script>
-    /* 주문 취소 버튼 스크립트 - 김동혁 추가(23.07.27) */
+    /* 주문 취소 버튼 스크립트 추가(23.07.27) */
     function showConfirmation(orderNum) {
         // 주문수정 버튼을 눌렀을 때 실행될 함수
         var confirmation = confirm("주문번호 " + orderNum + "를 취소하시겠습니까?");
@@ -106,7 +106,7 @@
         }
     }
 
-    /* 리뷰작성 버튼 스크립트 - 김동혁 추가(23.07.28) */
+    /* 리뷰작성 버튼 스크립트 추가(23.07.28) */
     function showReviewForm(orderNum) {
         // 먼저 로그인 상태인지 확인할 것(if문)
 
