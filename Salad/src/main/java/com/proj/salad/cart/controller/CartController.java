@@ -34,7 +34,7 @@ public class CartController {
         System.out.println(request.getParameter("prodNum"));
         System.out.println(request.getParameter("cartCount"));
 
-        // 수정해야함!!!!
+        
         cartVO.setProdNum(Integer.parseInt(request.getParameter("prodNum")));
         cartVO.setCartCount(Integer.parseInt(request.getParameter("cartCount")));
 
