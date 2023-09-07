@@ -32,7 +32,7 @@ public class ReviewServiceImpl implements ReviewService {
 	@Autowired
 	private FileUtils fileUtils;
 	
-	//하유리: 1.
+	// 1.
 	@Override
 	public List<ReviewVO> selectAllReviewList(Criteria criteria) {
 		return reviewDao.selectAllReviewList(criteria);
@@ -43,23 +43,23 @@ public class ReviewServiceImpl implements ReviewService {
 		return reviewDao.getTotal();
 	}
 
-	//하유리: 2-1. 글쓰기(23.07.16.)
+	// 2-1. 글쓰기(23.07.16.)
 	@Override
 	public void insertReview(ReviewVO reviewVO, HttpServletRequest request, MultipartHttpServletRequest mRequest) throws Exception {
 		// 게시글 작성
 		reviewDao.insertReview(reviewVO);
 		
-		//하유리: 게시물 번호 가져오기(23.07.20.)
+		// 게시물 번호 가져오기(23.07.20.)
 		String ReviewSeq = reviewDao.selectReview(reviewVO);
 		
-		//하유리: 파일 업로드(23.07.20.)
+		// 파일 업로드(23.07.20.)
 		List<Map<String,Object>> list = fileUtils.parseInsertFileInfo(reviewVO, mRequest, ReviewSeq, filePath);	//DB에 넣을 정보만 list에 담음
 		for(int i=0, size=list.size(); i<size; i++){
 			reviewDao.insertImage(list.get(i));
 		}
 	}
 
-	//김동혁: 2-1-1. order 테이블 reviewStatus -> 1로 수정(23.08.02)
+	// 2-1-1. order 테이블 reviewStatus -> 1로 수정(23.08.02)
 
 
 	@Override
@@ -67,13 +67,13 @@ public class ReviewServiceImpl implements ReviewService {
 		reviewDao.updateReviewStatus(reviewVO);
 	}
 
-	//하유리: 3-1. 게시물 상세보기(23.07.16.)
+	// 3-1. 게시물 상세보기(23.07.16.)
 	@Override
 	public ReviewVO detailReview(int re_articleNO) {
 		return reviewDao.detailReview(re_articleNO);
 	}
 
-	//하유리: 3-2. 조회수(23.07.16.)
+	// 3-2. 조회수(23.07.16.)
 	@Override
 	public void updateCnt(int re_articleNO, HttpSession session) {
 		long updateTime=0;	
@@ -93,13 +93,13 @@ public class ReviewServiceImpl implements ReviewService {
 		}	
 	}
 	
-	//하유리: 이미지 정보 가져오기(23.07.23.)
+	// 이미지 정보 가져오기(23.07.23.)
 	@Override
 	public List<Review_imageVO> detailImg(int re_articleNO) {
 		return reviewDao.detailImg(re_articleNO);
 	}
 	
-	//하유리: 3-3. 업로드 이미지 출력(23.07.23.)
+	// 3-3. 업로드 이미지 출력(23.07.23.)
 	@Override
 	public void imgDown(String re_storedFileName,  HttpServletResponse response) {
 		// 직접 파일 정보를 변수에 저장해 놨지만, 이 부분이 db에서 읽어왔다고 가정한다.
@@ -134,27 +134,27 @@ public class ReviewServiceImpl implements ReviewService {
             }
 	}
 
-	//하유리: 4-2. 게시물 수정하기(23.07.18.)
+	// 4-2. 게시물 수정하기(23.07.18.)
 	@Override
 	public int updateReview(ReviewVO reviewVO) {
 		return reviewDao.updateReview(reviewVO);
 	}
 
-	//하유리: 5. 게시물 삭제하기(23.07.18.)
+	// 5. 게시물 삭제하기(23.07.18.)
 	@Override
 	public void deleteReview(int re_articleNO) {
 		reviewDao.deleteReview(re_articleNO);
 	}
 
-	//하유리: 6-2. 답변 작성(23.07.18.)
+	// 6-2. 답변 작성(23.07.18.)
 	@Override
 	public void replyReview(ReviewVO reviewVO, HttpServletRequest request, MultipartHttpServletRequest mRequest) throws Exception {
 		reviewDao.replyReview(reviewVO);
 		
-		//하유리: 게시물 번호 가져오기(23.07.31.)
+		// 게시물 번호 가져오기(23.07.31.)
 		String ReviewSeq = reviewDao.selectReview(reviewVO);
 				
-		//하유리: 파일 업로드(23.07.31.)
+		// 파일 업로드(23.07.31.)
 		List<Map<String,Object>> list = fileUtils.parseInsertFileInfo(reviewVO, mRequest, ReviewSeq, filePath);	//DB에 넣을 정보만 list에 담음
 		for(int i=0, size=list.size(); i<size; i++){
 			reviewDao.insertImage(list.get(i));
