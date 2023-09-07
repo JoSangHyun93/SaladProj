@@ -11,7 +11,7 @@
 	<meta charset="UTF-8">
   	<title>메인 페이지</title>
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
-  		<!-- 하유리: CSS 링크 수정(23.07.31.) -->
+  		<!--  CSS 링크 수정(23.07.31.) -->
 	<link href="resources/css/header.css" rel="stylesheet" type="text/css">
 	<link href="resources/css/footer.css" rel="stylesheet" type="text/css">
 	<link href="resources/css/map/mapPage.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 
 <body>
 	<div class="map_wrap">
-		<!-- 하유리: 제목 -->
+		<!--  제목 -->
 		<div class="map_sub">
 			<p class="map_text">LOCATION</p>
 		</div>
