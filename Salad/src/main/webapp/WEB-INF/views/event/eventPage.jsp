@@ -17,7 +17,7 @@
 
 <body>		
 	<div class="event_sub">
-		<p class="event_text1">EVENT</p>			<!-- 하유리: 텍스트 수정(23.07.29.) -->
+		<p class="event_text1">EVENT</p>			<!--  텍스트 수정(23.07.29.) -->
 	</div>
 		
 	<div class="eventBanner_wrap">
