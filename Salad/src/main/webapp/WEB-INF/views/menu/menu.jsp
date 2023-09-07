@@ -9,7 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- css 적용 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<!-- 하유리: CSS 링크 수정(23.07.31.) -->
+	<!--  CSS 링크 수정(23.07.31.) -->
     <link href="resources/css/header.css" rel="stylesheet" type="text/css">
     <link href="resources/css/footer.css" rel="stylesheet" type="text/css">
     <link href="resources/css/menu.css" rel="stylesheet" type="text/css">
@@ -18,8 +18,8 @@
 </head>
 <body>
 <div class="content1">
-	<div class="menu_content">										<!-- 하유리: 제목 <div> 추가(23.07.29.) -->
-    	<h1 class="menu-h1">MENU</h1>						<!-- 하유리: 텍스트 수정(23.07.29.) -->
+	<div class="menu_content">										<!--  제목 <div> 추가(23.07.29.) -->
+    	<h1 class="menu-h1">MENU</h1>						<!--  텍스트 수정(23.07.29.) -->
 	</div>
 	<!-- 광고(23.08.11.) -->
 	<div class="ad">
@@ -32,17 +32,17 @@
 		</div>
 	</div>
 	
-    <%-- 김동혁 수정 ( 리스트 출력 )(23.07.14.)--%>
+    <%--  수정 ( 리스트 출력 )(23.07.14.)--%>
     <div class="listBox">
         <c:forEach var="prod" items="${prodList}" varStatus="prodNum">
         <c:if test="${prodNum.index >= 0 && prodNum.index <= 8 || prodNum.index >= 9 && prodNum.index <= 11}">
             <%-- 채소 타이틀 출력 --%>
             <c:if test="${prodNum.index == 0}">
-                <h2 class="menu-h2">#채소</h2>				<!-- 하유리: 텍스트 수정(23.07.29.) -->
+                <h2 class="menu-h2">#채소</h2>				<!--  텍스트 수정(23.07.29.) -->
             </c:if>
             <%-- 육류 타이틀 출력 --%>
             <c:if test="${prodNum.index == 9}">
-                <h2 class="menu-h3">#육류</h2>				<!-- 하유리: 텍스트, 클래스명 수정(23.07.29.) -->
+                <h2 class="menu-h3">#육류</h2>				<!--  텍스트, 클래스명 수정(23.07.29.) -->
             </c:if>
             <c:if test="${prodNum.index mod 3 == 0}">		
                 <br>
@@ -57,7 +57,7 @@
                         <p class="prodPText"> ₩ ${prod.prodPrice}</p>
                     </div>
                     <div class="prodModalBox">
-                        <!-- 모달 버튼 / 김동혁 추가 (23.07.18) -->
+                        <!-- 모달 버튼 -->
 
                     </div>
                     <!-- <div class="prodAddCart prodListBox">
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<!-- 모달 / 김동혁 추가 (23.07.18) -->
+<!-- 모달  -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -107,7 +107,7 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-addcart">장바구니 담기</button>	<!-- 하유리: 텍스트 수정(23.07.27.) -->          
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-addcart">장바구니 담기</button>	<!--  텍스트 수정(23.07.27.) -->          
                 <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">닫기</button>
             </div>
         </div>
@@ -115,7 +115,7 @@
 </div> <%-- 모달 end --%>
 
 <script>
-    /* 모달 Ajax 스크립트 / 김동혁 추가 (23.07.18) */
+    /* 모달 Ajax 스크립트  추가 (23.07.18) */
     $(document).ready(function() {
         let selectedProdNum;
 
