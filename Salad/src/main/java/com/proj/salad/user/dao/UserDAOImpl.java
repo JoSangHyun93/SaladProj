@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.proj.salad.user.vo.UserVO;
 
-/* 서승희 userDAO */
+
 @Repository("userDAO")
 public class UserDAOImpl  implements UserDAO{
 	
