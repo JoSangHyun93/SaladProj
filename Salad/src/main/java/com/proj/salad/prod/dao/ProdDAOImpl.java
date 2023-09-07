@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.proj.salad.prod.vo.ProdVO;
 
-/* 김동혁 - DAO 추가 */
+
 @Repository("prodDAO")
 public class ProdDAOImpl implements ProdDAO {
     @Autowired
@@ -21,7 +21,7 @@ public class ProdDAOImpl implements ProdDAO {
         return list;
     }
 
-    /* 영양소 Select DAO / 김동혁 추가 (23.07.18) */
+    /* 영양소 Select DAO */
     public NutrientVO selectProdNutrient(int prodNum) throws DataAccessException {
         System.out.println("영양소 DAO");
         NutrientVO nutrientVO = sqlSession.selectOne("mapper.prod.selectProdNutrient", prodNum);
