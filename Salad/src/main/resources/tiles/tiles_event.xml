@@ -11,7 +11,7 @@
       <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
    </definition>
 
-   <!-- 하유리: 이벤트페이지(23.07.19.)  -->
+   <!--  이벤트페이지(23.07.19.)  -->
    <definition name="/event/*" extends="baseLayout">
       <put-attribute name="title" value="이벤트페이지" />
       <put-attribute name="body" value="/WEB-INF/views/event/eventPage.jsp" />
