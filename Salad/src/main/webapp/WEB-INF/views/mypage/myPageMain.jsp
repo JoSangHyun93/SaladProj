@@ -39,7 +39,7 @@
 				<a href="${contextPath }/notice/list"><p style="border-top: 1px solid #e2e2e2;">공지확인</p></a>
 			</div>
 		</div>
-		<!-- 하유리: 클래스에 따옴표 없어서 수정(23.08.02.) -->
+		<!--  클래스에 따옴표 없어서 수정(23.08.02.) -->
 		<div class="myinfo_container">
 			<h1 class="myinfo">#나의 정보</h1>
 			<br>
@@ -70,7 +70,7 @@
 			<form method="post" id="orderhis_Form">
 				<table>
 					<tbody>
-						<!-- 주문일자 검색 추가 23.07.30 서승희 -->
+						<!-- 주문일자 검색 추가 23.07.30  -->
 						<%-- <tr>
 					<td><select name="curYear">
 							<c:forEach var="i" begin="0" end="5">
