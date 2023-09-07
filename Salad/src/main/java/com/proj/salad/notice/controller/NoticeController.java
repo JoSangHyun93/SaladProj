@@ -32,7 +32,7 @@ public class NoticeController extends HttpServlet {
 	@Autowired
 	private HttpSession session;
 
-	//하유리: 1. 공지게시판 전체리스트 보기(23.07.24.)
+	// 1. 공지게시판 전체리스트 보기(23.07.24.)
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public String selectAllNoticeList(Model model, HttpServletRequest request, HttpServletResponse response, Criteria criteria) throws Exception {
 		List<NoticeVO> list = noticeService.selectAllNoticeList(criteria);
@@ -46,13 +46,13 @@ public class NoticeController extends HttpServlet {
 		return "/notice/list";
 	}
 	
-	//하유리: 2-1. 공지게시판 글쓰기(23.07.16.)
+	// 2-1. 공지게시판 글쓰기(23.07.16.)
 	@RequestMapping(value="/insert", method=RequestMethod.GET)
 	public String insertForm() {
 		return "/notice/insertNotice";
 	}
 	
-	//하유리: 2-2. 공지게시판 글쓰기(23.07.16.)
+	// 2-2. 공지게시판 글쓰기(23.07.16.)
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
     public ModelAndView insertNotice(NoticeVO noticeVO, HttpServletRequest request, MultipartHttpServletRequest mRequest, HttpServletResponse response) throws Exception {
 
@@ -65,7 +65,7 @@ public class NoticeController extends HttpServlet {
     	return mav;
     }
 
-	//하유리: 3-1. 게시물 상세보기(23.07.16.)
+	// 3-1. 게시물 상세보기(23.07.16.)
 	@RequestMapping(value="/content", method=RequestMethod.GET)
 	public String detailNotice(int articleNO, Model model, HttpSession session) {
 		//조회수
@@ -82,14 +82,14 @@ public class NoticeController extends HttpServlet {
 		return "/notice/noticeContent";
 	}
 	
-	//하유리: 3-3. 업로드 이미지 출력(23.07.23.)
+	// 3-3. 업로드 이미지 출력(23.07.23.)
 		@RequestMapping(value="/imgDown" , method=RequestMethod.GET)
 		public void ImgDown(@RequestParam("storedFileName") String storedFileName, HttpServletResponse response) {
 			//System.out.println("파일 이름: " + storedFileName);
 			noticeService.imgDown(storedFileName, response);
 		}
 	
-	//하유리: 4-1. 게시물 수정하기(23.07.18.)
+	//: 4-1. 게시물 수정하기(23.07.18.)
 	@RequestMapping(value="/update", method=RequestMethod.GET)
 	public String updateForm(Model model, int articleNO) {
 		NoticeVO noticeVO = noticeService.detailNotice(articleNO);
@@ -98,21 +98,21 @@ public class NoticeController extends HttpServlet {
 		return "/notice/updateNotice";
 	}
 	
-	//하유리: 4-2. 게시물 수정하기(23.07.18.)
+	// 4-2. 게시물 수정하기(23.07.18.)
 	@RequestMapping(value="/update", method=RequestMethod.POST)
 	public String updateNotice(NoticeVO noticeVO) {
 		noticeService.updateNotice(noticeVO);
 		return "redirect:/notice/list";
 	}
 	
-	//하유리: 5. 게시물 삭제하기(23.07.18.)
+	// 5. 게시물 삭제하기(23.07.18.)
 	@RequestMapping(value="/delete", method=RequestMethod.GET)
 	public String deleteNotice(int articleNO) {
 		noticeService.deleteNotice(articleNO);
 		return "redirect:/notice/list";
 	}
 	
-	//하유리: 6-1. 답변폼 조회(23.07.18.)
+	// 6-1. 답변폼 조회(23.07.18.)
 	@RequestMapping(value="/reply", method=RequestMethod.GET)
 	public String replyForm(Model model, int articleNO) {
 		NoticeVO noticeVO = noticeService.detailNotice(articleNO);
@@ -120,7 +120,7 @@ public class NoticeController extends HttpServlet {
 		return "/notice/replyNotice";		
 	}
 	
-	//하유리: 6-2. 답변 작성(23.07.18.)
+	// 6-2. 답변 작성(23.07.18.)
 	@RequestMapping(value="/reply", method=RequestMethod.POST)
 	public String replyNotice(NoticeVO noticeVO, HttpServletRequest request) {
 		
