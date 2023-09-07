@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- 김동혁 - cart 매퍼 -->
+<!--  cart 매퍼 -->
 <mapper namespace="mapper.cart">
     <resultMap id="cartResult" type="cartVO">
         <result property="cartNum" column="cartNum" />
