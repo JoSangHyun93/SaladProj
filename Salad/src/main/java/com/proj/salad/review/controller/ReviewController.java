@@ -51,7 +51,7 @@ public class ReviewController extends HttpServlet {
 	@Autowired
 	private ajaxCommentVO ajaxCommentVO;
 
-	//하유리: 1. 리뷰게시판 전체리스트 보기(23.07.16.)
+	// 1. 리뷰게시판 전체리스트 보기(23.07.16.)
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public String selectAllReviewList(Model model, HttpServletRequest request, HttpServletResponse response, Criteria criteria) throws Exception {
 		List<ReviewVO> list = reviewService.selectAllReviewList(criteria);
@@ -65,7 +65,7 @@ public class ReviewController extends HttpServlet {
 		return "/review/list";
 	}
 	
-	//하유리: 2-1. 리뷰게시판 글쓰기(23.07.16.)
+	// 2-1. 리뷰게시판 글쓰기(23.07.16.)
 	@RequestMapping(value="/insert", method=RequestMethod.GET)
 	public ModelAndView insertFormWithON(@RequestParam("orderNum") int orderNum,
 								   HttpServletRequest request) throws Exception {
@@ -91,7 +91,7 @@ public class ReviewController extends HttpServlet {
 		return mav;
 	}
 	
-	//하유리: 2-2. 리뷰게시판 글쓰기(23.07.16.)
+	// 2-2. 리뷰게시판 글쓰기(23.07.16.)
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
     public ModelAndView insertReview(ReviewVO reviewVO, HttpServletRequest request, MultipartHttpServletRequest mRequest, HttpServletResponse response) throws Exception {
         // 화면에서 전송한 모든 데이터가 HttpServletRequest에 저장됨
@@ -109,7 +109,7 @@ public class ReviewController extends HttpServlet {
     	return mav;
     }
 
-	//하유리: 3-1. 게시물 상세보기(23.07.16.)
+	// 3-1. 게시물 상세보기(23.07.16.)
 	@RequestMapping(value="/content", method=RequestMethod.GET)
 	public String detailReview(@RequestParam("re_articleNO") Integer re_articleNO, Model model, HttpSession session) {
 		//조회수
@@ -122,7 +122,7 @@ public class ReviewController extends HttpServlet {
 		ReviewVO review = reviewService.detailReview(re_articleNO);
 
 
-		//조상현:  세션이용(23.07.31)
+		// 세션이용(23.07.31)
 		session.removeAttribute("re_articleNO");
 		session.setAttribute("re_articleNO", re_articleNO);
 
@@ -135,7 +135,7 @@ public class ReviewController extends HttpServlet {
 		return "/review/reviewContent";
 	}
 	
-	//조상현:  대댓글 추가(23.08.01)
+	// 대댓글 추가(23.08.01)
 	@RequestMapping(value="/addComment" , method=RequestMethod.POST, produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	 public String addComment(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -196,7 +196,7 @@ public class ReviewController extends HttpServlet {
 	        System.out.println(jsonString);
 	        return jsonString;
 	    }
-	//조상현:  대댓글 추가(23.08.01)
+	// 대댓글 추가(23.08.01)
 	@RequestMapping(value="/getCommentList" , method=RequestMethod.POST, produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	 public String getCommentList(HttpServletRequest request, HttpServletResponse response) {
@@ -219,14 +219,14 @@ public class ReviewController extends HttpServlet {
 
 
 
-	//하유리: 3-2. 업로드 이미지 출력(23.07.23.)
+	// 3-2. 업로드 이미지 출력(23.07.23.)
 	@RequestMapping(value="/imgDown" , method=RequestMethod.GET)
 	public void ImgDown(@RequestParam("re_storedFileName") String re_storedFileName, HttpServletResponse response) {
 		//System.out.println("파일 이름: " + re_storedFileName);
 		reviewService.imgDown(re_storedFileName, response);
 	}
 	
-	//하유리: 4-1. 게시물 수정하기(23.07.18.)
+	// 4-1. 게시물 수정하기(23.07.18.)
 	@RequestMapping(value="/update", method=RequestMethod.GET)
 	public String updateForm(Model model, int re_articleNO) {
 		ReviewVO review = reviewService.detailReview(re_articleNO);
@@ -235,21 +235,21 @@ public class ReviewController extends HttpServlet {
 		return "/review/updateReview";
 	}
 	
-	//하유리: 4-2. 게시물 수정하기(23.07.18.)
+	// 4-2. 게시물 수정하기(23.07.18.)
 	@RequestMapping(value="/update", method=RequestMethod.POST)
 	public String updateReview(ReviewVO reviewVO) {
 		reviewService.updateReview(reviewVO);
 		return "redirect:/review/list";
 	}
 	
-	//하유리: 5. 게시물 삭제하기(23.07.18.)
+	// 5. 게시물 삭제하기(23.07.18.)
 	@RequestMapping(value="/delete", method=RequestMethod.GET)
 	public String deleteReveiw(int re_articleNO) {
 		reviewService.deleteReview(re_articleNO);
 		return "redirect:/review/list";
 	}
 	
-	//하유리: 6-1. 답변폼 조회(23.07.18.)
+	// 6-1. 답변폼 조회(23.07.18.)
 	@RequestMapping(value="/reply", method=RequestMethod.GET)
 	public String replyForm(Model model, int re_articleNO) {
 		ReviewVO review = reviewService.detailReview(re_articleNO);
@@ -257,7 +257,7 @@ public class ReviewController extends HttpServlet {
 		return "/review/replyReview";		
 	}
 	
-	//하유리: 6-2. 답변 작성(23.07.18.) 수정(23.07.31.)
+	// 6-2. 답변 작성(23.07.18.) 수정(23.07.31.)
 	@RequestMapping(value="/reply", method=RequestMethod.POST)
 	public String replyReview(ReviewVO reviewVO, HttpServletRequest request, MultipartHttpServletRequest mRequest, HttpServletResponse response) throws Exception {
 		
@@ -270,7 +270,7 @@ public class ReviewController extends HttpServlet {
 		return "redirect:/review/list";
 	}
 
-	// 김동혁: 7-1. 검색어 기능(23.08.11) 추가
+	// 7-1. 검색어 기능(23.08.11) 추가
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String selectSearchReviewList(@RequestParam String s_title,
 			Model model, HttpServletRequest request, HttpServletResponse response, Criteria criteria) throws Exception {
@@ -290,7 +290,7 @@ public class ReviewController extends HttpServlet {
 		return "/review/search";
 	}
 
-	// getViewName 추가 - 김동혁
+	// getViewName 추가
 	private String getViewName(HttpServletRequest request) throws Exception {
 		String contextPath = request.getContextPath();
 		String uri = (String) request.getAttribute("javax.servlet.include.request_uri");
