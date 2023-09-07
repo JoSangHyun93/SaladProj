@@ -31,7 +31,7 @@ public class NoticeServiceImpl implements NoticeService {
 	@Autowired
 	private FileUtils fileUtils;
 	
-	//하유리: 1.
+	// 1.
 	@Override
 	public List<NoticeVO> selectAllNoticeList(Criteria criteria){
 		return noticeDao.selectAllNoticeList(criteria);
@@ -42,7 +42,7 @@ public class NoticeServiceImpl implements NoticeService {
 		return noticeDao.getTotal();
 	}
 
-	//하유리: 2-1. 글쓰기(23.07.16.)
+	// 2-1. 글쓰기(23.07.16.)
 	@Override
 	public void insertNotice(NoticeVO noticeVO, HttpServletRequest request, MultipartHttpServletRequest mRequest) throws Exception {
 		// 게시글 작성
@@ -52,20 +52,20 @@ public class NoticeServiceImpl implements NoticeService {
 		String NoticeSeq = noticeDao.selectNotice(noticeVO);
 		System.out.println("NoticeSeq :" + NoticeSeq);
 		
-		//하유리: 파일 업로드(23.07.20.)
+		// 파일 업로드(23.07.20.)
 		List<Map<String,Object>> list = fileUtils.parseInsertFileInfo(noticeVO, mRequest, NoticeSeq, filePath);
 		for(int i=0, size=list.size(); i<size; i++){
 			noticeDao.insertImage(list.get(i));
 		}
 	}
 
-	//하유리: 3-1. 게시물 상세보기(23.07.16.)
+	// 3-1. 게시물 상세보기(23.07.16.)
 	@Override
 	public NoticeVO detailNotice(int articleNO) {
 		return noticeDao.detailNotice(articleNO);
 	}
 
-	//하유리: 3-2. 조회수(23.07.16.)
+	// 3-2. 조회수(23.07.16.)
 	@Override
 	public void updateCnt(int articleNO, HttpSession session) {
 		long updateTime=0;	
@@ -85,13 +85,13 @@ public class NoticeServiceImpl implements NoticeService {
 		}	
 	}
 	
-	//하유리: 이미지 정보 가져오기(23.07.23.)
+	// 이미지 정보 가져오기(23.07.23.)
 	@Override
 	public List<Notice_imageVO> detailImg(int articleNO) {
 		return noticeDao.detailImg(articleNO);
 	}
 	
-	//하유리: 3-3. 업로드 이미지 출력(23.07.23.)
+	// 3-3. 업로드 이미지 출력(23.07.23.)
 	@Override
 	public void imgDown(String storedFileName,  HttpServletResponse response) {
 		// 직접 파일 정보를 변수에 저장해 놨지만, 이 부분이 db에서 읽어왔다고 가정한다.
@@ -126,19 +126,19 @@ public class NoticeServiceImpl implements NoticeService {
         }
 	}
 
-	//하유리: 4-2. 게시물 수정하기(23.07.18.)
+	// 4-2. 게시물 수정하기(23.07.18.)
 	@Override
 	public int updateNotice(NoticeVO noticeVO) {
 		return noticeDao.updateNotice(noticeVO);
 	}
 
-	//하유리: 5. 게시물 삭제하기(23.07.18.)
+	// 5. 게시물 삭제하기(23.07.18.)
 	@Override
 	public void deleteNotice(int articleNO) {
 		noticeDao.deleteNotice(articleNO);
 	}
 
-	//하유리: 6-2. 답변 작성(23.07.18.)
+	// 6-2. 답변 작성(23.07.18.)
 	@Override
 	public void replyNotice(NoticeVO noticeVO) {
 		noticeDao.replyNotice(noticeVO);
