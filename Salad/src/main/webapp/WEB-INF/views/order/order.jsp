@@ -13,7 +13,7 @@
     <link href="resources/css/header.css" rel="stylesheet" type="text/css">
     <link href="resources/css/footer.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
-	<!-- 하유리: CSS 링크 수정(23.08.01.) -->
+	<!--  CSS 링크 수정(23.08.01.) -->
    	<link href="resources/css/header.css" rel="stylesheet" type="text/css">
    	<link href="resources/css/footer.css" rel="stylesheet" type="text/css">
    	<link href="resources/css/order/order.css" rel="stylesheet" type="text/css">
@@ -23,10 +23,10 @@
 <main>
     <p class="p2">주문 / 결제</p>
 
-	<!-- 하유리: 배송주소, 연락처, 요청사항 placeholder 띄어쓰기 수정(23.08.01.) -->
+	<!--  배송주소, 연락처, 요청사항 placeholder 띄어쓰기 수정(23.08.01.) -->
     <form action="${contextPath}/payment" method="post">
         <p class="h3">구매자 정보</p>
-        <!-- <hr> -->								<!-- 하유리: 주석 처리(23.08.01.) -->
+        <!-- <hr> -->								<!--  주석 처리(23.08.01.) -->
         <div class="info-block to">
             <div class="line">
                 <div class="line-title"><label for="name">이름</label></div>
@@ -50,9 +50,9 @@
             </div>
         </div>
         <p class="h3">받는 사람 정보  
-              <button type="button" id="copyButton" class="info-setting">구매자정보와 동일</button>		<!-- 하유리: 텍스트 수정(23.08.01.) -->
+              <button type="button" id="copyButton" class="info-setting">구매자정보와 동일</button>		<!--  텍스트 수정(23.08.01.) -->
         </p>
-        <!-- <hr> -->								<!-- 하유리: 주석 처리(23.08.01.) -->
+        <!-- <hr> -->								<!--  주석 처리(23.08.01.) -->
         <div class="info-block to">
             <div class="line">
                 <div class="line-title"><label for="name">이름</label></div>
@@ -74,22 +74,22 @@
             </div>
             <div class="line">
                 <div class="line-title"><label for="memo">배송시 요청사항</label></div>
-                <div class="line-content"><input type="text" name="memo" id="memo" placeholder="요청사항을 입력해주세요" required autocomplete="none">		<!-- 하유리: 자동완성기능 끄기(23.08.02.) -->
+                <div class="line-content"><input type="text" name="memo" id="memo" placeholder="요청사항을 입력해주세요" required autocomplete="none">		<!--  자동완성기능 끄기(23.08.02.) -->
                 </div>
             </div>
         </div>
 <p class="h3">결제 상품 목록</p>
-<!-- <hr> -->								<!-- 하유리: 주석 처리(23.08.01.) -->
+<!-- <hr> -->								<!--  주석 처리(23.08.01.) -->
         <div class="item-box">
             <c:forEach items="${orderList}" var="cartList" varStatus="listStatus">
-                <div class="info-block order-list">		<!-- 하유리: 클래스명 추가(23.08.01.) -->
+                <div class="info-block order-list">		<!--  클래스명 추가(23.08.01.) -->
                     <div class="line">
                         <div class="line-title">상품정보 </div>
-                        <div class="line-content">상품명: <b>${cartList.prodName}</b></div>		<!-- 하유리: '상품명: ' 텍스트, <b> 추가(23.08.01.) -->
+                        <div class="line-content">상품명: <b>${cartList.prodName}</b></div>		<!--  '상품명: ' 텍스트, <b> 추가(23.08.01.) -->
                             <%--                        <input type="text" value="${cartList.prodName}" name="" hidden>--%>
-                        <div class="line-content">수량: <b>${cartList.cartCount}</b></div>			<!-- 하유리: '상품명: ' 텍스트, <b> 추가(23.08.01.) -->
+                        <div class="line-content">수량: <b>${cartList.cartCount}</b></div>			<!--  '상품명: ' 텍스트, <b> 추가(23.08.01.) -->
                             <%--                        <input type="text" value="${cartList.cartCount}" hidden>--%>
-                        <div class="line-content">상품가격: <b>${cartList.prodPrice}원</b></div>	<!-- 하유리: '상품명: ' 텍스트, <b>, '원' 추가(23.08.01.) -->
+                        <div class="line-content">상품가격: <b>${cartList.prodPrice}원</b></div>	<!--  '상품명: ' 텍스트, <b>, '원' 추가(23.08.01.) -->
                             <%--                        <input type="text" value="${cartList.prodPrice}" hidden>--%>
                     </div>
                     <!-- 다른 속성들도 필요하면 여기에 추가 -->
@@ -115,8 +115,8 @@
             <input type="text" value="${totalPrice + 3000}" name="totalPrice" hidden>
         </div>
 
-        <p class="h3 pay-info">결제 정보</p>		<!-- 하유리: 클래스명 추가(23.08.01.) -->
-        <!-- <hr> -->											<!-- 하유리: 주석 처리(23.08.01.) -->
+        <p class="h3 pay-info">결제 정보</p>		<!--  클래스명 추가(23.08.01.) -->
+        <!-- <hr> -->											<!--  주석 처리(23.08.01.) -->
         <div class="info-block">
             <div class="line">
                 <div class="line-title">총상품가격</div>
@@ -129,12 +129,12 @@
             <div class="line">
                 <div class="line-title">총결제금액</div>
                 <div class="line-price" style="color: #d12420;"><fmt:formatNumber value="${totalPrice+shippingCost}"
-                                                                  pattern="###,###원"/></div>	<!-- 하유리: 금액 폰트색 지정(23.07.31.) -->
+                                                                  pattern="###,###원"/></div>	<!--  금액 폰트색 지정(23.07.31.) -->
             </div>									
             <div class="line">
                 <div id="radioLine"class="line-title">결제방법</div>
                 <div class="line-content">
-                    <div class="line pay option">		<!-- 하유리: 클래스명 'option' 추가(23.08.01.) -->
+                    <div class="line pay option">		<!--  클래스명 'option' 추가(23.08.01.) -->
                         <input type="radio" id="transfer" name="purchaseType" value="transfer" disabled>
                         <label class="radiolabel" for="transfer">계좌이체</label>
 
@@ -153,7 +153,7 @@
                     </div>
                     <div class="line pay">
                             <div class="line-card">카드번호</div>
-                        <div class="form-input">		<!-- 하유리: 카드번호 사이 '-', 자동완성 끄기 추가(23.08.01.) -->
+                        <div class="form-input">		<!--  카드번호 사이 '-', 자동완성 끄기 추가(23.08.01.) -->
                             <input type="text2" id="card" name="cardNum1" size="2" minlength="4" maxlength="4" required autocomplete='off'>-
                             <input type="text2" name="cardNum2" size="2" minlength="4" maxlength="4" required autocomplete='off'>-
                             <input type="text2" name="cardNum3" size="2" minlength="4" maxlength="4" required autocomplete='off'>-
@@ -163,7 +163,7 @@
                         <div class="line pay">
                             <div class="line-card">유효기간</div>
                         
-                        <div class="form-input">		<!-- 하유리: 자동완성 끄기 추가(23.08.01.) -->
+                        <div class="form-input">		<!--  자동완성 끄기 추가(23.08.01.) -->
                             <input type="text3" id="period" name="period1" size="2" minlength="2" maxlength="2" placeholder="mm" 
                                    required autocomplete='off'> /
                             <input type="text3" name="period2" size="2" minlength="2" maxlength="2" placeholder="yy" required autocomplete='off'>
@@ -172,7 +172,7 @@
                         <div class="line pay cvcNum">
                             <div id="CVC" class="line-card">CVC</div>
                         
-                        <div class="form-input">		<!-- 하유리: 자동완성 끄기 추가(23.08.01.) -->
+                        <div class="form-input">		<!--  자동완성 끄기 추가(23.08.01.) -->
                             <input type="text4" id="cvc" name="cvc" minlength="3" maxlength="3" required placeholder="3자리" autocomplete='off'>
                         </div>
                         </div>
