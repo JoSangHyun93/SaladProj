@@ -32,17 +32,17 @@
        <put-attribute name="body" value="/WEB-INF/views/mypage/listMyOrderHistory.jsp" />
      </definition> -->
 	
-      <!-- orderList 추가 - 김동혁 -->
+      <!-- orderList 추가 -->
       <definition name="/mypage/orderList" extends="baseLayoutMyPage">
        <put-attribute name="title" value="주문 내역" />
        <put-attribute name="body" value="/WEB-INF/views/mypage/orderList.jsp" />
      </definition>
-     <!-- orderInfo 주문 상세 추가 - 김동혁 -->
+     <!-- orderInfo 주문 상세 추가  -->
     <definition name="/mypage/orderInfo/*" extends="baseLayoutMyPage">
         <put-attribute name="title" value="주문 상세 정보" />
         <put-attribute name="body" value="/WEB-INF/views/mypage/orderInfo.jsp" />
     </definition>
-    <!-- canceledList 주문 취소 리스트 - 김동혁 -->
+    <!-- canceledList 주문 취소 리스트  -->
     <definition name="/mypage/canceledList" extends="baseLayoutMyPage">
         <put-attribute name="title" value="주문 상세 정보" />
         <put-attribute name="body" value="/WEB-INF/views/mypage/canceledList.jsp" />
