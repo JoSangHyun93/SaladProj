@@ -55,14 +55,14 @@
 			justify-content: center;
 		}
 		
-		/* 하유리: 행 간격 띄우기(23.07.17.) */
+		/*  행 간격 띄우기(23.07.17.) */
 		.reply_table table {
 			text-align: left;	/* th 왼쪽정렬 */
 			border-collapse: separate;
 			border-spacing: 10px 20px;
 		}
 	
-		/* 하유리: 글자-input박스 간 간격(23.07.17.) */
+		/*  글자-input박스 간 간격(23.07.17.) */
 		.reply_table th {
 			font-weight: normal;
 			flex: left;
@@ -115,7 +115,7 @@
 		}
 		
 		.contentBtn:focus {
-			outline: none;						/* 하유리: 버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
+			outline: none;						/*  버튼 클릭 시 생기는 테두리 없애기(23..07.31.) */
 		}
 	</style>
 
@@ -133,7 +133,7 @@
 			<form action="<c:url value='/review/reply'/>" method="POST">
 				<input name="re_articleNO" type="hidden" value="${review.re_articleNO }">
 				<table>
-				<!-- 하유리: 필요 없는 부분  주석(23.07.30.) -->
+				<!--  필요 없는 부분  주석(23.07.30.) -->
 				<!-- <tr>
 					<th>주문상품</th>
 					<td>	<input class="reply_input" name="orderList" required autocomplete="off" width="440px" disabled/></td>
