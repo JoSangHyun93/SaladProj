@@ -15,14 +15,14 @@
 </head>
 
 <body>
-	<!-- 하유리: footer 전체적으로 수정(23.07.26.)(23.07.29.) -->
+	<!--  footer 전체적으로 수정(23.07.26.)(23.07.29.) -->
 	<div class="footer_wrapper">
-		<!-- 하유리: 로고 부분(23.07.29.) -->
+		<!--  로고 부분(23.07.29.) -->
 		<div class="footer_logo">
 			<img width="200px" src="${contextPath}/resources/image/common/footer/logo2.png"/>
 		</div>
 		
-		<!-- 하유리: 회사 정보 부분(23.07.29.) -->
+		<!--  회사 정보 부분(23.07.29.) -->
 		<div class="footer_info">
 			<ul class="company_terms">
 				<li><a href="${contextPath}/terms"><b>이용약관</b></a>｜<li>
@@ -39,7 +39,7 @@
 			<p>Copyright <b>© saladdaiso Corp.</b> All rights Reserved</p>
 		</div>
 		
-		<!-- 하유리: 메뉴 부분 추가(23.07.29.) -->
+		<!--  메뉴 부분 추가(23.07.29.) -->
 		<div class="footer_menu">
 			<ul>
 				<li><b>사이트맵</b></li>
@@ -53,7 +53,7 @@
 			</ul>
 		</div>
 		
-		<!-- 하유리: SNS 로고 부분(23.07.29.) -->
+		<!--  SNS 로고 부분(23.07.29.) -->
 		<div class="footer_sns">
 			<ul>
 				<li><a href="#"><img width="18px" src="${contextPath}/resources/image/common/footer/instagram_logo.svg"/></a></li>
