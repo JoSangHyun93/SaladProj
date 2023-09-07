@@ -8,7 +8,6 @@
 		<setting name="jdbcTypeForNull" value="NULL" />
 	</settings>
 	<typeAliases>
-		<!-- 김동혁 -->
 		<!-- NutrientVO 추가 (23.07.17) -->
 		<typeAlias type="com.proj.salad.prod.vo.ProdVO"
 			alias="prodVO" />
@@ -19,11 +18,10 @@
 		 <typeAlias type="com.proj.salad.mypage.vo.OrderInfoVO" alias="orderInfoVO" />
 		
 			
-		<!-- 서승희 추가 DAO에서 SQL문으로 값을 전달 할 때 또는 SQL문을 실행한 후 가져온 값을 DAO로 전달 할 때 사용 
+		<!--  DAO에서 SQL문으로 값을 전달 할 때 또는 SQL문을 실행한 후 가져온 값을 DAO로 전달 할 때 사용 
 			할 VO 빈을 생성 -->
 		<typeAlias type="com.proj.salad.user.vo.UserVO"
 			alias="userVO" />
-		 <!-- 서승희 추가 23.07.19 -->
 		 <typeAlias type="com.proj.salad.mypage.vo.MyPageVO" 
 		 	alias="mypageVO" />
 
@@ -37,15 +35,12 @@
 		<typeAlias type="com.proj.salad.order.vo.OrderMenuVO"
 			alias="orderMenuVO" />
 
-		<!-- 하유리 -->
 		<typeAlias type="com.proj.salad.review.vo.ReviewVO"
 			alias="reviewVO" />
 
-		<!-- 하유리(23.07.24.) -->
 		<typeAlias type="com.proj.salad.notice.vo.NoticeVO"
 			alias="noticeVO" />
 			
-	 <!-- 조상현 추가  -->	
 		<typeAlias type="com.proj.salad.order.vo.AccountVO"
 			alias="accountVO" />
 			
