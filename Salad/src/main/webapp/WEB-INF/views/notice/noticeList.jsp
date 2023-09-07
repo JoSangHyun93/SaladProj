@@ -24,7 +24,7 @@
 <body>
 	<!-- 제목: 변경(23.07.21.) -->
 	<div class="notice_sub">
-		<p class="notice_text">NOTICE</p>			<!-- 하유리: 텍스트 수정(23.07.29.) -->
+		<p class="notice_text">NOTICE</p>			<!--  텍스트 수정(23.07.29.) -->
 	</div>
 	<!-- 광고(23.08.11.) -->
 	<div class="ad">
@@ -124,8 +124,8 @@
 		</div>
 		
 		<!-- 글쓰기 버튼  -->
-		<!-- 하유리: id가 admin(관리자)인 사람만 글쓰기 버튼 활성화(23.07.24.) -->
-		<!-- 하유리: 안 돼서 수정(23.07.30.)-->		
+		<!--  id가 admin(관리자)인 사람만 글쓰기 버튼 활성화(23.07.24.) -->
+		<!--  안 돼서 수정(23.07.30.)-->		
 		<c:if test="${user.userId == 'admin' }">
 			<div class="noticeBtn">
 				<button class="writeBtn" type="button" onClick="location.href='${contextPath}/notice/insert'">글쓰기</button>
