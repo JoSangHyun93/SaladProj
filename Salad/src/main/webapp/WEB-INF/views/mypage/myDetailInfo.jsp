@@ -2,7 +2,7 @@
 	pageEncoding="utf-8"
 	isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>	<!-- 하유리: Tiles가 제공하는 태그 라이브러리 추가(23.07.25.) -->
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>	<!--  Tiles가 제공하는 태그 라이브러리 추가(23.07.25.) -->
 <c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
 
 <!DOCTYPE html >
@@ -18,60 +18,44 @@
    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
  	<link href="../resources/css/header.css" rel="stylesheet" type="text/css" >
 	<link href="../resources/css/footer.css" rel="stylesheet" type="text/css" >
-	<link href="../resources/css/mypage/myDetailInfo.css" rel="stylesheet" type="text/css" >	<!-- 하유리: css 적용(23.07.25.) -->
-	<style>
-	/* #login_table{
-	width:100%;
-	 display: flex;
-	 justify-content: center;
-	}
-	.user-form {
-           display: inline-block;
-           padding: 30px;
-        } */
-   /*  .fixed_join{
-     	 justify-content: center;
-         padding-top:12px;
-         padding-right:15px;
-         }  */
+	<link href="../resources/css/mypage/myDetailInfo.css" rel="stylesheet" type="text/css" >	<!--  css 적용(23.07.25.) -->
 
-	</style>
 
 </head>
 
 <body>
-	<div class="total">															<!-- 하유리: div 추가(23.07.25.) -->
-		<div class="join_sub">													<!-- 하유리: div 추가(23.07.25.) -->
-			<!-- 23.08.01 서승희 제목 수정 -->
-			<p class="text_center">#회원 상세 정보</p>						<!-- 하유리: style 태그 적용하기 위해 <p>태그로 수정, 텍스트 수정(23.07.25.) -->
+	<div class="total">															<!--  div 추가(23.07.25.) -->
+		<div class="join_sub">													<!--  div 추가(23.07.25.) -->
+			<!-- 23.08.01 제목 수정 -->
+			<p class="text_center">#회원 상세 정보</p>						<!--  style 태그 적용하기 위해 <p>태그로 수정, 텍스트 수정(23.07.25.) -->
 		</div>
-		<div class="lineAndForm">											<!-- 하유리: div 추가(23.07.25.) -->
-			<!-- 하유리: 구분선 및 텍스트 추가(23.07.25.) -->
+		<div class="lineAndForm">											<!--  div 추가(23.07.25.) -->
+			<!--  구분선 및 텍스트 추가(23.07.25.) -->
 			<div class="top_line">		
 				<span class="basic">정보입력</span>	
 				<span class="essential">*</span>
 				<span>필수입력사항</span>
 			</div>
-			<!-- 하유리: div 추가(23.07.25.) -->
+			<!--  div 추가(23.07.25.) -->
 			<div class="userForm">
 				<form name="frm_mod_user" >
-									<!-- 하유리: <div id="login_table"> 삭제 -->
-					<table>	<!-- 하유리: align="center" 삭제(23.07.25.) -->
+									<!--  <div id="login_table"> 삭제 -->
+					<table>	<!--  align="center" 삭제(23.07.25.) -->
 						<tbody>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">아이디<span class="essential">*</span>	<!-- 하유리: <span> 추가, align속성 삭제(23.07.25.) -->
+									<p class="join_label">아이디<span class="essential">*</span>	<!--  <span> 추가, align속성 삭제(23.07.25.) -->
 								</td>	
-								<td align="left"><!-- 하유리: class, </td> 추가(23.07.25.) -->
-									<input class="join_input" type="text" name="userId"  id="userId"   minlength="2" maxlength="10" required  value="${user.userId }" disabled/>					<!-- 서승희: <style> 삭제(23.08.01.) -->					
+								<td align="left"><!--  class, </td> 추가(23.07.25.) -->
+									<input class="join_input" type="text" name="userId"  id="userId"   minlength="2" maxlength="10" required  value="${user.userId }" disabled/>					<!-- : <style> 삭제(23.08.01.) -->					
 								</td>
 							</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">비밀번호<span class="essential">*</span>						<!-- 하유리: align속성, class, </p><span> 추가(23.07.25.) -->
+									<p class="join_label">비밀번호<span class="essential">*</span>						<!--  align속성, class, </p><span> 추가(23.07.25.) -->
 								</td>
-								<td><input class="join_input" name="userPwd" id="userPwd" type="password" minlength="4" maxlength="12" required  value="${user.userPwd }" /></td>	<!-- 하유리: align속성, size 삭제(23.07.25.) -->
-								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+								<td><input class="join_input" name="userPwd" id="userPwd" type="password" minlength="4" maxlength="12" required  value="${user.userPwd }" /></td>	<!--  align속성, size 삭제(23.07.25.) -->
+								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 -->
 								<button class="btn-cursor-pointer" type="button" onClick="fn_modify_user_info('userPwd')">
 								<img src="${contextPath}/resources/image/mypage/modify1.png" alt="userPwd" width="27px;" height="27px;">
 								</button>
@@ -80,8 +64,8 @@
 							</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">비밀번호 확인<span class="essential">*</span></td>				<!-- 하유리: align속성, class, </p><span> 추가(23.07.25.) -->
-								<!-- 23.07.27 서승희 비밀번호 확인 추가 -->
+									<p class="join_label">비밀번호 확인<span class="essential">*</span></td>				<!--  align속성, class, </p><span> 추가(23.07.25.) -->
+								<!-- 23.07.27  비밀번호 확인 추가 -->
 								<!-- onkeyup="JS function" 입력이 되었을 때, -->
 								<td><input class="join_input"  type="password" name="userPwdConfirm" id="userPwdConfirm" placeholder="비밀번호 확인" onkeyup="passConfirm()"></td>
 								<td><span id ="confirmMsg"></span></td>
@@ -89,10 +73,10 @@
 							
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">이름<span class="essential">*</span>																	<!-- 하유리: align속성 삭제(23.07.25.) -->
+									<p class="join_label">이름<span class="essential">*</span>																	<!--  align속성 삭제(23.07.25.) -->
 								</td>
-								<td><input class="join_input" name="userName" type="text" minlength="2" maxlength="10" required  value="${user.userName }" /></td>				<!-- 하유리: align속성, size 삭제(23.07.25.) -->
-								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+								<td><input class="join_input" name="userName" type="text" minlength="2" maxlength="10" required  value="${user.userName }" /></td>				<!--  align속성, size 삭제(23.07.25.) -->
+								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경  -->
 								<button class="btn-cursor-pointer" type="button" onClick="fn_modify_user_info('userName')">
 								<img src="${contextPath}/resources/image/mypage/modify1.png" alt="userName" width="27px;" height="27px;">
 								</button>
@@ -102,7 +86,7 @@
 							</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">성별<span class="essential">*</span>																	<!-- 하유리: <span> 태그 추가, align속성 삭제(23.07.25.) -->
+									<p class="join_label">성별<span class="essential">*</span>																	<!--  <span> 태그 추가, align속성 삭제(23.07.25.) -->
 								</td>
 								<td class="userGender" align="left">
 									<c:choose>
@@ -118,7 +102,7 @@
 						 			</c:otherwise>
 								 </c:choose>
 								</td>
-								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경  -->
 								<button class="btn-cursor-pointer" type="button" onClick="fn_modify_user_info('userGender')">
 								<img src="${contextPath}/resources/image/mypage/modify1.png" alt="userGender" width="27px;" height="27px;">
 								</button>
@@ -126,10 +110,10 @@
 								</td>
 							</tr>
 							<tr class="dot_line">
-								<td class="fixed_join"><p class="join_label" id="label_email">이메일<span class="essential">*</span></td>	<!-- 하유리: align속성, <br>(e-mail) 삭제(23.07.25.) -->
+								<td class="fixed_join"><p class="join_label" id="label_email">이메일<span class="essential">*</span></td>	<!--  align속성, <br>(e-mail) 삭제(23.07.25.) -->
 								<td>
-									<input class="join_input " type="email" name="userEmail" id="userEmail" value="${user.userEmail }" style="margin-bottom: 10px;"/>			<!-- 하유리: align속성, size 삭제(23.07.25.) -->
-								 <!-- 23.07.23 서승희 이메일 수신여부 수정 -->
+									<input class="join_input " type="email" name="userEmail" id="userEmail" value="${user.userEmail }" style="margin-bottom: 10px;"/>			<!--  align속성, size 삭제(23.07.25.) -->
+								 <!-- 23.07.23  이메일 수신여부 수정 -->
 								<c:choose> 
 					    		<c:when test="${user.emailsts_yn=='true' || user.emailsts_yn=='Y,'}">
 					      			<input  class="email_chk"  type="checkbox" name="emailsts_yn"   id="emailsts_y"   value="Y,"  checked /><span class="email_chk_text" >쇼핑몰에서 발송하는 e-mail을 수신합니다.</span>	<!-- 23.07.20 email 수신동의 수정 -->
@@ -139,7 +123,7 @@
 								</c:otherwise>
 					 			</c:choose>
 								</td>
-								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경  -->
 								<button class="btn_modify_email btn-cursor-pointer" type="button" onClick="fn_modify_user_info('email')">
 								<img src="${contextPath}/resources/image/mypage/modify1.png" alt="email" width="27px;" height="27px;">
 								</button>
@@ -148,10 +132,10 @@
 						</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">생년월일<span class="essential">*</span>							<!-- 하유리: align속성 삭제, <span>추가(23.07.25.) -->
+									<p class="join_label">생년월일<span class="essential">*</span>							<!--  align속성 삭제, <span>추가(23.07.25.) -->
 								</td>
-								<td><input class="join_input" name="userBirth" type="text"  maxlength="8" required  value="${user.userBirth }" /></td>	<!-- 하유리: align속성, size, <br>(e-mail) 삭제(23.07.25.) -->
-								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+								<td><input class="join_input" name="userBirth" type="text"  maxlength="8" required  value="${user.userBirth }" /></td>	<!--  align속성, size, <br>(e-mail) 삭제(23.07.25.) -->
+								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경  -->
 								<button class="btn-cursor-pointer" type="button" onClick="fn_modify_user_info('userBirth')">
 								<img src="${contextPath}/resources/image/mypage/modify1.png" alt="userBirth" width="27px;" height="27px;">
 								</button>
@@ -160,9 +144,9 @@
 							</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label" id="label_phone">연락처<span class="essential">*</span>	<!-- 하유리: align속성 삭제, <span>추가(23.07.25.) -->
+									<p class="join_label" id="label_phone">연락처<span class="essential">*</span>	<!--  align속성 삭제, <span>추가(23.07.25.) -->
 								</td>
-								<td> <input class="join_input" type="text" name="userPhone" maxlength="12" required  value="${user.userPhone }" style="margin-bottom: 10px;"/>	<!-- 하유리: align속성, size삭제, <style> 추가(23.07.25.) -->
+								<td> <input class="join_input" type="text" name="userPhone" maxlength="12" required  value="${user.userPhone }" style="margin-bottom: 10px;"/>	<!--  align속성, size삭제, <style> 추가(23.07.25.) -->
 									<!-- <select  name="userPhone" id="userPhone">
 										<option>없음</option>
 										<option selected value="010">010</option>
@@ -191,7 +175,7 @@
 										<option value="0508">0508</option>
 										<option value="070">070</option>
 									</select>  -->
-					<!-- 23.07.23 서승희 연락처 수신여부 수정 -->
+					<!-- 23.07.23  연락처 수신여부 수정 -->
 					<c:choose> 
 					   <c:when test="${user.smssts_yn=='true' || user.smssts_yn=='Y,'}">
 					     <input class="sms_chk" type="checkbox"  name="smssts_yn"  id="smssts_y"  value="Y,"  checked /><span class="sms_chk_text" >쇼핑몰에서 발송하는 SMS를 수신합니다.</span> <!-- 23.07.20 sms 수신동의 수정 -->
@@ -201,7 +185,7 @@
 							</c:otherwise>
 					 	</c:choose>	
 					 	</td>
-						<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+						<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경  -->
 						<button class="btn_modify_phone btn-cursor-pointer" type="button" onClick="fn_modify_user_info('phone')">
 						<img src="${contextPath}/resources/image/mypage/modify1.png" alt="phone" width="27px;" height="27px;">
 						</button>
@@ -210,17 +194,17 @@
 						</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">
-									<p class="join_label">주소<span class="essential">*</span>	<!-- 하유리: align속성 삭제, <span>추가(23.07.25.) -->
+									<p class="join_label">주소<span class="essential">*</span>	<!--  align속성 삭제, <span>추가(23.07.25.) -->
 								</td>
-								<td>																								<!-- 하유리: align속성 삭제(23.07.25.) -->
+								<td>																								<!--  align속성 삭제(23.07.25.) -->
 									<p class="addressTxt"> 
 									  	<input class="addBtn" type="button" onClick="location.href='javascript:execDaumPostcode()'"value="주소 검색" style="width:100%; "/><br><br>
-									  	<!-- 서승희 주소검색 부분 추가 23.07.19 --><!-- 하유리: 기본주소: , 상세주소: 텍스트 삭제 + placeholder 수정 + 버튼 윗부분으로 이동(23.07.25.) -->
+									  	<!--  주소검색 부분 추가 23.07.19 --><!--  기본주소: , 상세주소: 텍스트 삭제 + placeholder 수정 + 버튼 윗부분으로 이동(23.07.25.) -->
 										<!-- 기본 주소:  --><input class="join_input" type="text" id="userAddress1" name="userAddress1" size="30" value="${user.userAddress1 }" placeholder="기본주소 입력" /><br><br>
 									  	<!-- 상세 주소:  --><input class="join_input" type="text" id="userAddress2"  name="userAddress2" size="30" value="${user.userAddress2 }" placeholder="상세주소 입력" /><br><br>
 								   </p>
 								  </td>
-								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경 서승희 -->
+								<td  class="btn_modify"><!-- 23.07.31 수정하기 아이콘으로 변경  -->
 								<button class="btn_modify_address btn-cursor-pointer" type="button" onClick="fn_modify_user_info('address')">
 								<img src="${contextPath}/resources/image/mypage/modify1.png" alt="address" width="27px;" height="27px;">
 								</button>
@@ -236,9 +220,9 @@
 						<%-- <input name="btn_modify_user" type="button" onclick="fn_modify_user_info('modify_all')"  value="수정하기"> --%>
 						<input class="btn-cancel" name="btn_cancel_user" type="reset"  value="수정취소">
 						<%-- <input type="button" onclick="location.href='${contextPath}/mypage/removeUser.do?userId=${user.userId}'" value="회원탈퇴"/> --%>
-						<!-- 23.07.31 서승희 회원탈퇴 수정 -->
+						<!-- 23.07.31  회원탈퇴 수정 -->
 						<input class="btn-delete-user" type="button" onclick="removeMember();" value="회원탈퇴"/>
-						<!-- <br><br> -->					<!-- 하유리: <br> 주석처리(23.08.02.) -->
+						<!-- <br><br> -->					<!--  <br> 주석처리(23.08.02.) -->
 					</div>
 				</form>
 			</div>
@@ -350,7 +334,7 @@ function execDaumPostcode() {
 }
 
   //비밀번호 확인 
-  //23.07.27 서승희 비밀번호 확인 추가
+  //23.07.27  비밀번호 확인 추가
 	function passConfirm() {
 	/* 비밀번호, 비밀번호 확인 입력창에 입력된 값을 비교해서 같다면 비밀번호 일치, 그렇지 않으면 불일치 라는 텍스트 출력.*/
 	/* document : 현재 문서를 의미함. 작성되고 있는 문서를 뜻함. */
@@ -371,7 +355,7 @@ function execDaumPostcode() {
 	}
   
   //회원탈퇴하기 
-  //23.07.31 서승희 회원탈퇴 추가
+  //23.07.31  회원탈퇴 추가
 function removeMember() {
 	if(window.confirm("정말 탈퇴 하시겠습니까?")){
 	location.href="${contextPath}/mypage/removeUser.do";
