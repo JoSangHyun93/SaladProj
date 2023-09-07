@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
-//23.07.27 문자 api 인증 서승희 추가
+//23.07.27 문자 api 인증
 @Service
 //@RequiredArgsConstructor는 Lombok으로 스프링에서 DI(의존성 주입)의 방법 중에 생성자 주입을 임의의 코드없이 자동으로 설정
 //초기화 되지않은 final 필드나, @NonNull 이 붙은 필드에 대해 생성자를 생성(@Autowired를 사용하지 않고 의존성 주입)
