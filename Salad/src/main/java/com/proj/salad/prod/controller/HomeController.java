@@ -22,9 +22,7 @@ import com.proj.salad.cart.vo.CartVO;
 import com.proj.salad.prod.service.ProdServiceImpl;
 import com.proj.salad.user.vo.UserVO;
 
-/**
- * Handles requests for the application home page.
- */
+
 @Controller
 public class HomeController {
 	
@@ -42,7 +40,6 @@ public class HomeController {
 		String viewName = getViewName(request);
 		System.out.println("viewName : " + viewName);
 
-		/* 김동혁 추가 */
 		/* 메인화면 '추천식단' 부분에 상품 리스트 출력 */
 		/*		List prodList = new ArrayList();
 				prodList = prodService.selectProdList();*/
@@ -54,13 +51,13 @@ public class HomeController {
 		return mav;
 	}
 	
-    //하유리: 이용약관 페이지(23.07.29.)
+    // 이용약관 페이지(23.07.29.)
 	@RequestMapping(value="/terms", method=RequestMethod.GET)
 	public String terms() {
     	return "/common/terms";
     }
 	
-	//하유리: 개인정보 처리방침(23.07.29.)
+	// 개인정보 처리방침(23.07.29.)
 	@RequestMapping(value="/policy", method=RequestMethod.GET)
 	public String policy() {
     	return "/common/policy";
@@ -72,7 +69,6 @@ public class HomeController {
 	    System.out.println("/mainAddCart 메소드 실행");
 	    String prodNum = request.getParameter("prodNum");
 
-	    // 수정해야함!!!!
 	    cartVO.setProdNum(Integer.parseInt(prodNum));
 	    cartVO.setCartCount(1);
 
