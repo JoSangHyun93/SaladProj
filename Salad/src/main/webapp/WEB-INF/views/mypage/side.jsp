@@ -6,7 +6,7 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
-<!-- 서승희 23.07.25 전체 수정 -->
+<!--  23.07.25 전체 수정 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,18 +25,18 @@
 		<c:choose>
 	  		<c:when test="${side_menu=='my_page' }">
 				<li>
-					<h3 class="list_sub">주문관리</h3>		<!-- 하유리: 클래스명 변경(23.07.31.) -->
+					<h3 class="list_sub">주문관리</h3>		<!--  클래스명 변경(23.07.31.) -->
 					<!-- <br> -->
 					<ul>
-						<li><a href="${contextPath}/mypage/myPageMain.do">- 최근주문내역</a></li>			<!-- 하유리: <br> 제거(23.07.31.) -->
+						<li><a href="${contextPath}/mypage/myPageMain.do">- 최근주문내역</a></li>			<!--  <br> 제거(23.07.31.) -->
 						<%-- <li><a href="${contextPath}/mypage/myOrderDetail.do">반품/교환 신청 및 조회</a></li><br> --%>
-						<li><a href="${contextPath}/mypage/orderList">- 나의주문내역</a></li>						<!-- 하유리: <br> 제거(23.07.31.) -->
+						<li><a href="${contextPath}/mypage/orderList">- 나의주문내역</a></li>						<!--  <br> 제거(23.07.31.) -->
 						<li><a href="${contextPath}/mypage/canceledList">- 취소주문내역</a></li><br>
 					</ul>
-				</li>															<!-- 하유리: <br> 제거(23.07.31.) -->
+				</li>															<!--  <br> 제거(23.07.31.) -->
 				<li>
-					<h3 class="list_sub">정보관리</h3>		<!-- 하유리: 클래스명 변경(23.07.31.) -->
-					<!-- <br> -->										<!-- 하유리: <br> 제거(23.07.31.) -->
+					<h3 class="list_sub">정보관리</h3>		<!--  클래스명 변경(23.07.31.) -->
+					<!-- <br> -->										<!--  <br> 제거(23.07.31.) -->
 					<ul>
 						<li><a href="${contextPath}/mypage/myDetailInfo.do">- 회원정보변경</a></li><br>
 						<!-- <li><a href="#">개인정보 동의내역</a></li><br>
@@ -46,13 +46,13 @@
 
 				<!-- <div> -->
  				<li>
-					<h2 class="list_sub">공지</h2>			<!-- 하유리: 클래스명 변경(23.07.31.) -->
-					<!-- <br> -->										<!-- 하유리: <br> 제거(23.07.31.) -->
-						<ul class="notice_hid">						<!-- 하유리: <p>태그의 클래스명 <ul>태그 클래스명으로 이동(23.07.31.) -->
+					<h2 class="list_sub">공지</h2>			<!--  클래스명 변경(23.07.31.) -->
+					<!-- <br> -->										<!--  <br> 제거(23.07.31.) -->
+						<ul class="notice_hid">						<!--  <p>태그의 클래스명 <ul>태그 클래스명으로 이동(23.07.31.) -->
 							<%-- <c:forEach  var="i" begin="1" end="3" step="1"> --%>
 							<li><p>
 								<%-- <a href="${contextPath}/notice/list">[안내] 샐러드다이소 시스템 점검 안내${ i}</a> --%>
-								<a href="${contextPath}/notice/content?articleNO=205">- 6월 서비스 점검 안내</a>						<!-- 하유리: 글 번호 수정(23.08.02.) -->
+								<a href="${contextPath}/notice/content?articleNO=205">- 6월 서비스 점검 안내</a>						<!--  글 번호 수정(23.08.02.) -->
 								</p></li>
 								<li><p>
 								<%-- <a href="${contextPath}/notice/list">[안내] 샐러드다이소 시스템 점검 안내${ i}</a> --%>
@@ -66,7 +66,7 @@
 						</ul>
 				</li>
 				<!-- </div> -->
-				<!-- <br> -->			<!-- 하유리: <br> 제거(23.07.31.) -->
+				<!-- <br> -->			<!--  <br> 제거(23.07.31.) -->
 
 				<%-- <div class="clear"></div>
 				<div id="banner">
