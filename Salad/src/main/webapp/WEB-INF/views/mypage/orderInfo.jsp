@@ -14,7 +14,7 @@
     <link href="../../resources/css/footer.css" rel="stylesheet" type="text/css">
     <link href="../../resources/css/mypage/orderInfo.css" rel="stylesheet" type="text/css">
     
-    <!-- 사이드 css 맞추기 위해 추가로 넣음 23.07.30 서승희  -->
+    <!-- 사이드 css 맞추기 위해 추가로 넣음 23.07.30   -->
     <link href="../../resources/css/style.css" rel="stylesheet" type="text/css" >
 	 <link href="../../resources/css/mypage/side.css" rel="stylesheet" type="text/css">
 	 
@@ -27,7 +27,7 @@
     <style>
         /* css 적용 부분 */
 	/*.odl-container{    임시 */
-        /* padding-top: 178px;    하유리: 헤더 영역만큼 아래로 내림(23.07.27.) */
+        /* padding-top: 178px;     헤더 영역만큼 아래로 내림(23.07.27.) */
    /*    .order-info-table{
       font-size:13px;
       } */
