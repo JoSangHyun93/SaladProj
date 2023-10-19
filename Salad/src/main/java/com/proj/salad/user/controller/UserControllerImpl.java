@@ -152,7 +152,7 @@ public class UserControllerImpl implements UserController {
 	}
 	
 	//문자 api 인증번호 발송
-	//23.07.27 문자 api 인증 서승희 추가
+	//23.07.27 문자 api 인증 추가
 	@RequestMapping(value="/sendSMS1.do")  //jsp 페이지 넘긴 mapping 값
 	@ResponseBody
 	public String sendSMS(String userPhone) {
