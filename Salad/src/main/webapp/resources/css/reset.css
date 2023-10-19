@@ -13,7 +13,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-/* 하유리: 주석처리(23.07.21.) */
+/*  주석처리(23.07.21.) */
 /* table, caption, tbody, tfoot, thead, tr, th, td, */
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-/* 하유리: 주석처리(23.07.21.) */
+/*  주석처리(23.07.21.) */
 /* body {
 	line-height: 1;
 } */
