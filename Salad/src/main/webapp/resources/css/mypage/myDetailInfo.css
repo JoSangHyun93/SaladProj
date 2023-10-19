@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* 하유리: 폰트(23.07.25.) */
+/*  폰트(23.07.25.) */
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body {  /* 마이페이지 글씨체 폰트 맞추기 23.07.30 서승희 추가*/
@@ -31,7 +31,7 @@ button{  /* 23.07.31 수정하기 아이콘으로 변경 서승희 */
 }
 
 
-/* 하유리: '회원가입' 텍스트를 포함한 전체(23.07.25.) */
+/*  '회원가입' 텍스트를 포함한 전체(23.07.25.) */
 .total {
 	width: 100%;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -39,16 +39,16 @@ button{  /* 23.07.31 수정하기 아이콘으로 변경 서승희 */
 	/* padding-top: 178px;	 */	/* 헤더 영역만큼 아래로 내림 */ /* 23.08.01 서승희 주석 */
 	padding-top: 210px;	 		/* 23.08.01 서승희 수정 */
 	margin-bottom: 100px;
-	/* margin-left:20px; */		/* 하유리: 주석 처리() */
+	/* margin-left:20px; */		/*  주석 처리() */
 }
 
-/* 하유리: 테이블(23.07.25.) */
+/*  테이블(23.07.25.) */
 table {
 	background-color: #fff;
 	padding: 23px 20px 0 20px;
 }
 
-/* 하유리: td(23.07.25.) */
+/*  td(23.07.25.) */
 td {
 	/* width: 640px; */
 	padding-left:20px;
@@ -75,17 +75,17 @@ td {
 	letter-spacing: -3px;
 }
 
-/* 하유리: '회원가입' 텍스트를 제외한 회원가입폼(23.07.25.) */
+/*  '회원가입' 텍스트를 제외한 회원가입폼(23.07.25.) */
 .lineAndForm {
 	width: 640px;
-	margin: 0px 70px;							/* 하유리: 좌측 여백너비 수정(23.08.02.) */
+	margin: 0px 70px;							/*  좌측 여백너비 수정(23.08.02.) */
 	
 	border: 1px solid #e2e2e2;
 	padding: 80px 100px;
 	border-radius: 15px;
 }
 
-/* 하유리: 구분선(23.07.25.) */
+/*  구분선(23.07.25.) */
 .top_line {
 	padding-bottom: 10px;
     /* border-bottom: 2px solid rgb(51, 51, 51); */
@@ -96,7 +96,7 @@ td {
     text-align: right;
 }
 
-/* 하유리: '정보입력' 텍스트(23.07.25.) */
+/*  '정보입력' 텍스트(23.07.25.) */
 .basic {
 	float: left;
 	font-size: 20px;
@@ -104,28 +104,28 @@ td {
 	color: #000;
 }
 
-/* 하유리: 필수입력사항 앞(23.07.25.) * */
+/*  필수입력사항 앞(23.07.25.) * */
 .essential {
 	color: rgb(238, 106, 123);
 }
 
-/* 하유리: 회원가입폼(23.07.25.) */
+/*  회원가입폼(23.07.25.) */
 .userForm {
 	width: 640px;		/* 너비 지정 */
 }
 
-/* 하유리: 각 행(23.07.25.) */
+/*  각 행(23.07.25.) */
 .dot_line {	/* 각 행을 1줄로 배열 */
     padding: 10px 20px;
 }
 
-/* 하유리: label을 감싸고 있는 블록(23.07.25.) */
+/*  label을 감싸고 있는 블록(23.07.25.) */
 .fixed_join {
 	width: 25%;
    	align-items: center;		/* 라벨 수직 중앙정렬 */
 }
 
-/* 하유리: label(23.07.25.) */
+/*  label(23.07.25.) */
 .join_label, .addressTxt {
 	font-size: 14px;
 	font-weight: 500;
@@ -133,7 +133,7 @@ td {
   	color: rgb(51, 51, 51);
 }
 
-/* 하유리: 이메일 label(체크박스 때문에 위치 따로 지정)(23.07.25.) */
+/*  이메일 label(체크박스 때문에 위치 따로 지정)(23.07.25.) */
 #label_email {
 	/* position: absolute; */		/* 절대위치로 지정 *//* 23.07.27 서승희 주석 */
 	top: 740px;
@@ -141,7 +141,7 @@ td {
   	padding-bottom:30px;  /* 23.07.27 서승희 추가 */
 }
 
-/* 하유리: 연락처 label(체크박스 때문에 위치 따로 지정)(23.07.25.) */
+/*  연락처 label(체크박스 때문에 위치 따로 지정)(23.07.25.) */
 #label_phone {
 	/* position: absolute;	 */	/* 절대위치로 지정 *//* 23.07.27 서승희 주석 */
 	top: 913px;
