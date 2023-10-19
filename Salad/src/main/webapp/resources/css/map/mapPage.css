@@ -3,30 +3,30 @@
 /* 폰트 */
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-/* 하유리: 전체 div(23.07.27.) */
+/*  전체 div(23.07.27.) */
 .map_wrap {
 	font-family: 'Noto Sans KR', sans-serif;
 	margin: 0 201px 100px 201px;
 }
 
-/* 하유리: '위치' 텍스트(23.07.27.) */
+/*  '위치' 텍스트(23.07.27.) */
 .map_sub {
-	padding: 178px 0 24px 0;			/* 하유리: 헤더 영역만큼 아래로 내림(23.07.25.) */
-													/* 하유리: 제목 주변 여백 수정(23.07.29.)  */
-	margin: 50px 0;							/* 하유리: 제목 주변 여백 수정(23.07.29.)  */
+	padding: 178px 0 24px 0;			/*  헤더 영역만큼 아래로 내림(23.07.25.) */
+													/*  제목 주변 여백 수정(23.07.29.)  */
+	margin: 50px 0;							/*  제목 주변 여백 수정(23.07.29.)  */
 }
 
-/* 하유리: 이벤트페이지 제목1(23.07.27.)  */
-/* 하유리: 수정(23.07.29.) */
+/*  이벤트페이지 제목1(23.07.27.)  */
+/*  수정(23.07.29.) */
 .map_text {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 32px;					/* 하유리: 제목 폰트크기 수정(23.07.28.) */
+    font-size: 32px;					/*  제목 폰트크기 수정(23.07.28.) */
     font-weight: 700;
     line-height: 1.2;		
-    letter-spacing: -1px;			/* 하유리: 제목 자간 수정(23.07.29.) */
+    letter-spacing: -1px;			/*  제목 자간 수정(23.07.29.) */
  }
  		
-/* 하유리: 지도(23.07.27.) */ 		
+/*  지도(23.07.27.) */ 		
 .map iframe {   			
 	margin: 0 0 30px 0;
 	width: 1000px;
@@ -50,7 +50,7 @@
 	margin: 45px 59px;
 }
 
-/* 하유리: 안내사항 <ul>(23.07.27.) */
+/*  안내사항 <ul>(23.07.27.) */
 .flexBox {
     display: -webkit-flex;
     flex-flow: row wrap;
@@ -60,7 +60,7 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 하유리: 안내사항 설명부분(23.07.27.) */
+/*  안내사항 설명부분(23.07.27.) */
 .flexBox>li {
     position: relative;
     width: calc(100% / 2);
@@ -72,7 +72,7 @@
     text-align: left;
 }
 
-/* 하유리: 글머리기호가 달린 소제목(23.07.27.) */
+/*  글머리기호가 달린 소제목(23.07.27.) */
 .flexBox .sTitle {
     margin: 10px 0;
    	font-size: 20px;
@@ -87,7 +87,7 @@
 .sTitle.bullet {
 }
 
-/* 하유리: 글머리기호(23.07.27.) */
+/*  글머리기호(23.07.27.) */
 .sTitle.bullet::before {
     content: "";
     display: inline-block;
@@ -101,19 +101,19 @@
     margin-left: -10px;
 }
 
-/* 하유리: <strong>(23.07.27.) */
+/*  <strong>(23.07.27.) */
 .flexBox strong {
     font-weight: 600;
     color: #333;
 }
 
-/* 하유리: 설명(23.07.27.) */
+/*  설명(23.07.27.) */
 .flexBox dd {
     line-height: 1.8;
     font-weight: 300;
 }
 
-/* 하유리: 영업시간 설명 */
+/*  영업시간 설명 */
 .sTitle_margin {
 	    margin-bottom: 19px;	/* 좌측열과 높이 맞추기 */
 }
