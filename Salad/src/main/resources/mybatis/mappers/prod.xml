@@ -18,7 +18,7 @@
         <result property="prodImageDate" column="prodImageDate"/>
     </resultMap>
 
-    <!-- 영양소 Map / 김동혁 추가 (23.07.18) -->
+    <!-- 영양소 Map 추가 (23.07.18) -->
     <resultMap id="prodNutrient" type="nutrientVO">
         <result property="prodNum" column="prodNum" />
         <result property="kcal" column="kcal" />
