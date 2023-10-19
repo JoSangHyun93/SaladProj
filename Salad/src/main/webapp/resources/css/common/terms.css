@@ -3,16 +3,16 @@
 /* 폰트 */
 	@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-/* 하유리: 이용약관 페이지 제목 div(23.07.29.) */
+/*  이용약관 페이지 제목 div(23.07.29.) */
 .terms_sub {
 	/* margin: 50px 0; */
 	margin: 50px 0 39px 0;
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 하유리: 이용약관 페이지 제목 텍스트(23.07.29.)  */
+/*  이용약관 페이지 제목 텍스트(23.07.29.)  */
 .terms_text {
-	padding-top: 178px;		/* 하유리: 헤더 영역만큼 아래로 내림(23.07.25.) */
+	padding-top: 178px;		/*  헤더 영역만큼 아래로 내림(23.07.25.) */
  	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 43px;
 	font-weight: 700;
@@ -29,7 +29,7 @@
     border-radius: 7px;
 }
 
-/* 하유리: 약관 세부내용 전체 div(23.07.29.) */
+/*  약관 세부내용 전체 div(23.07.29.) */
 .terms_wrap {
 	font-family: 'Noto Sans KR', sans-serif;
 	padding: 50px;
@@ -44,7 +44,7 @@
     background-color: #fff;
 }
 
-/* 하유리: 약관 세부내용 텍스트(23.07.29.) */
+/*  약관 세부내용 텍스트(23.07.29.) */
 .terms_detail {
 	text-align: left;
 	padding-bottom: 30px;
